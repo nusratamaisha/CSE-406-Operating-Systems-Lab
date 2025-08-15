@@ -24,7 +24,7 @@ int main(){
         cin>>p[i].priority>>p[i].arrt>>p[i].bt;
     }
     int time=0, finished=0;
-    double totatTat=0.0, totalWt=0.0;
+    double totalTat=0.0, totalWt=0.0;
     while(finished<n){
         int index = -1;
         int highest_p=INT_MAX;
@@ -44,7 +44,7 @@ int main(){
             p[index].wt = p[index].tat - p[index].bt;
             finished++;
             p[index].done = true;
-            totatTat += p[index].tat;
+            totalTat += p[index].tat;
             totalWt += p[index].wt;
         }
         else{
@@ -62,4 +62,7 @@ int main(){
         cout<<"   "<<p[i].wt<<"\t\t";
         cout<<"\n";
     }
+
+    cout<<"Average turnaround time:"<<totalTat/n<<"\n";
+    cout<<"Average waiting time:"<<totalWt/n<<"\n";
 }
