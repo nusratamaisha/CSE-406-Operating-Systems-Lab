@@ -18,7 +18,6 @@ int main() {
         int idx=-1;
         int minDist=INT_MAX;
 
-        // Find the closest unvisited request
         for (int j = 0; j < n; j++) {
             if (!visited[j]) {
                 int distance=abs(currentHead - requests[j]);
